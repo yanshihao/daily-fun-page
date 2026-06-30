@@ -1,6 +1,6 @@
 {
   "date": "2026-06-30",
-  "updated_at": "2026-06-30T06:00:13.232097+00:00",
+  "updated_at": "2026-06-30T06:01:17.597724+00:00",
   "locale": "zh-CN",
   "items": [
     {
@@ -34,9 +34,9 @@
     {
       "emoji": "🧰",
       "source": "中文开源",
-      "title": "zhiyuan1i/adblock_list",
-      "summary": "⭐ 727 · adblock_list 是一个致力于中文区广告过滤、隐私保护的快速迭代规则，以解决现有中文区拦截规则重复、维护缓慢等问题",
-      "url": "https://github.com/zhiyuan1i/adblock_list"
+      "title": "sou350121/VLA-Handbook",
+      "summary": "⭐ 336 · 本项目旨在为致力于进入VLA(Vision-Language-Action)领域的算法工程师提供一份全中文、实战导向的学习/面试手册。 不同于通用的 CV/NLP 面试指南，本项目聚焦于 Robotics 特有的挑战",
+      "url": "https://github.com/sou350121/VLA-Handbook"
     },
     {
       "emoji": "✨",
