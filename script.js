@@ -41,22 +41,32 @@ function renderCards(items = []) {
   }
 }
 
+function createArchiveButton(label, path, activePath, isLatest = false) {
+  const button = document.createElement('button');
+  button.type = 'button';
+  button.className = isLatest ? 'archive-button latest-archive-button' : 'archive-button';
+  button.textContent = label;
+  button.dataset.path = path;
+  if (path === activePath) button.classList.add('active');
+  button.addEventListener('click', () => loadDailyFun(path, true));
+  return button;
+}
+
 function renderArchive(archive = [], activePath = 'data/today.json') {
   archiveEl.innerHTML = '';
+
+  // Always provide an obvious way back to the newest issue near the archive list.
+  archiveEl.appendChild(createArchiveButton('最新 / 本期', 'data/today.json', activePath, true));
+
   if (!archive.length) {
-    archiveEl.innerHTML = '<span>暂无往期归档</span>';
+    const empty = document.createElement('span');
+    empty.textContent = '暂无往期归档';
+    archiveEl.appendChild(empty);
     return;
   }
 
   for (const entry of archive.slice(0, 30)) {
-    const button = document.createElement('button');
-    button.type = 'button';
-    button.className = 'archive-button';
-    button.textContent = entry.date;
-    button.dataset.path = entry.path;
-    if (entry.path === activePath) button.classList.add('active');
-    button.addEventListener('click', () => loadDailyFun(entry.path, false));
-    archiveEl.appendChild(button);
+    archiveEl.appendChild(createArchiveButton(entry.date, entry.path, activePath));
   }
 }
 

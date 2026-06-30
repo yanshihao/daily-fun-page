@@ -218,6 +218,14 @@ h1 {
 .archive-button { cursor: pointer; }
 .archive-list a:hover, .archive-button:hover { color: var(--text); border-color: rgba(255,207,112,.4); }
 .archive-button.active { color: #111525; background: linear-gradient(135deg, var(--accent), var(--accent-2)); border-color: transparent; font-weight: 900; }
+
+.latest-archive-button {
+  color: #111525;
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  border-color: transparent;
+  font-weight: 900;
+}
+
 footer { text-align: center; color: var(--muted); padding: 0 20px 36px; }
 
 @media (max-width: 760px) {
