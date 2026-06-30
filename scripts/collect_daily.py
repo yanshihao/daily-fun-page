@@ -23,6 +23,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 DATA_DIR = ROOT / "data"
 ARCHIVE_DIR = DATA_DIR / "archive"
+VERSIONS_DIR = DATA_DIR / "versions"
 TODAY_JSON = DATA_DIR / "today.json"
 ARCHIVE_INDEX = DATA_DIR / "archive.json"
 
@@ -217,21 +218,37 @@ def collect_github_cn(today: datetime) -> dict | None:
         return None
 
 
-def build_archive_list(today: str) -> list[dict]:
+def build_archive_list(today: str, version_id: str | None = None) -> list[dict]:
     entries = []
+
+    # New format: each collection creates one timestamped version.
+    for path in sorted(VERSIONS_DIR.glob("*.json"), reverse=True):
+        stem = path.stem
+        date = stem[:10]
+        time_part = stem[11:].replace("-", ":") if len(stem) > 11 else ""
+        label = f"{date} {time_part}".strip()
+        entries.append({"date": label, "path": f"data/versions/{path.name}"})
+
+    # Compatibility with older daily archive files.
     for path in sorted(ARCHIVE_DIR.glob("*.json"), reverse=True):
+        if path.stem == today and version_id:
+            continue
         entries.append({"date": path.stem, "path": f"data/archive/{path.name}"})
-    if not any(entry["date"] == today for entry in entries):
-        entries.insert(0, {"date": today, "path": f"data/archive/{today}.json"})
+
+    if version_id and not any(entry["path"] == f"data/versions/{version_id}.json" for entry in entries):
+        label = f"{today} {version_id[11:].replace('-', ':')}"
+        entries.insert(0, {"date": label, "path": f"data/versions/{version_id}.json"})
     return entries[:30]
 
 
 def main() -> int:
     DATA_DIR.mkdir(exist_ok=True)
     ARCHIVE_DIR.mkdir(parents=True, exist_ok=True)
+    VERSIONS_DIR.mkdir(parents=True, exist_ok=True)
 
     now = datetime.now(timezone.utc)
     today = now.strftime("%Y-%m-%d")
+    version_id = now.strftime("%Y-%m-%d-%H-%M-%S")
     random.seed(today)
 
     items = []
@@ -274,17 +291,21 @@ def main() -> int:
     payload = {
         "date": today,
         "updated_at": now.isoformat(),
+        "version_id": version_id,
         "locale": "zh-CN",
         "items": unique_items,
-        "archive": build_archive_list(today),
+        "archive": build_archive_list(today, version_id),
     }
 
+    version_path = VERSIONS_DIR / f"{version_id}.json"
     archive_path = ARCHIVE_DIR / f"{today}.json"
+    version_path.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    # Keep the old daily path as a stable alias for the latest version of that day.
     archive_path.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     TODAY_JSON.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     ARCHIVE_INDEX.write_text(json.dumps(payload["archive"], ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
-    print(f"Daily Fun generated: {today}, {len(unique_items)} items")
+    print(f"Daily Fun generated: {version_id}, {len(unique_items)} items")
     return 0
 
 

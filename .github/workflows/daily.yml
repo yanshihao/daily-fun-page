@@ -30,4 +30,4 @@ jobs:
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: "Update daily fun data"
-          file_pattern: data/*.json data/archive/*.json
+          file_pattern: data/*.json data/archive/*.json data/versions/*.json
