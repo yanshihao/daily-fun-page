@@ -3,6 +3,7 @@ const cardsEl = document.querySelector('#cards');
 const archiveEl = document.querySelector('#archiveList');
 const todayTitle = document.querySelector('#todayTitle');
 const template = document.querySelector('#cardTemplate');
+const latestButton = document.querySelector('#latestButton');
 
 let currentData = null;
 
@@ -66,7 +67,11 @@ function renderDataset(data, path = 'data/today.json') {
   setStatus(`已加载：${data.date || '今天'}${versionText} · 共 ${data.items?.length || 0} 条趣味`, 'good');
   renderCards(data.items || []);
   renderArchive(data.archive || [], path);
+  if (latestButton) {
+    latestButton.hidden = path === 'data/today.json';
+  }
 }
+
 
 async function loadDailyFun(path = 'data/today.json', cacheBust = true) {
   try {
@@ -94,6 +99,10 @@ async function loadDailyFun(path = 'data/today.json', cacheBust = true) {
       renderArchive([]);
     }
   }
+}
+
+if (latestButton) {
+  latestButton.addEventListener('click', () => loadDailyFun('data/today.json', true));
 }
 
 function init() {

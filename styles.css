@@ -99,6 +99,29 @@ h1 {
   line-height: 1.9;
   font-size: clamp(1.05rem, 2vw, 1.28rem);
 }
+
+.status-row {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.latest-button {
+  min-height: 42px;
+  padding: 10px 16px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,207,112,.45);
+  background: linear-gradient(135deg, rgba(255,207,112,.95), rgba(126,231,255,.9));
+  color: #111525;
+  font: inherit;
+  font-weight: 900;
+  cursor: pointer;
+  box-shadow: 0 14px 34px rgba(0,0,0,.2);
+}
+.latest-button:hover { transform: translateY(-1px); }
+.latest-button[hidden] { display: none; }
+
 .status {
   display: inline-flex;
   align-items: center;
