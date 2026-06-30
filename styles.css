@@ -183,15 +183,18 @@ h1 {
   flex-wrap: wrap;
   gap: 12px;
 }
-.archive-list a, .archive-list span {
+.archive-list a, .archive-list span, .archive-button {
   padding: 10px 14px;
   border-radius: 999px;
   background: rgba(255,255,255,.08);
   border: 1px solid rgba(255,255,255,.12);
   color: var(--muted);
   text-decoration: none;
+  font: inherit;
 }
-.archive-list a:hover { color: var(--text); border-color: rgba(255,207,112,.4); }
+.archive-button { cursor: pointer; }
+.archive-list a:hover, .archive-button:hover { color: var(--text); border-color: rgba(255,207,112,.4); }
+.archive-button.active { color: #111525; background: linear-gradient(135deg, var(--accent), var(--accent-2)); border-color: transparent; font-weight: 900; }
 footer { text-align: center; color: var(--muted); padding: 0 20px 36px; }
 
 @media (max-width: 760px) {
