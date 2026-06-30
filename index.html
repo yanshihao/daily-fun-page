@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>每日趣味 Daily Fun</title>
+  <meta name="description" content="每天自动更新的趣味内容集合：历史上的今天、科技新闻、GitHub 有趣项目、冷知识与灵感短句。" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="bg-orb orb-one"></div>
+  <div class="bg-orb orb-two"></div>
+
+  <header class="hero">
+    <nav class="nav">
+      <a class="brand" href=".">Daily Fun</a>
+      <a href="#today">今日</a>
+      <a href="#archive">往期</a>
+      <a href="https://github.com/yanshihao/daily-fun-page" target="_blank" rel="noreferrer">GitHub</a>
+    </nav>
+
+    <section class="hero-inner">
+      <p class="kicker">每天一点有意思</p>
+      <h1>每日趣味</h1>
+      <p class="subtitle">自动搜集并整理一些值得一看的冷知识、历史片段、科技新鲜事和开源项目。</p>
+      <div class="status" id="status">正在读取今日内容……</div>
+    </section>
+  </header>
+
+  <main>
+    <section id="today" class="section">
+      <div class="section-head">
+        <p>Today</p>
+        <h2 id="todayTitle">今日精选</h2>
+      </div>
+      <div class="grid" id="cards"></div>
+    </section>
+
+    <section id="archive" class="section archive-section">
+      <div class="section-head">
+        <p>Archive</p>
+        <h2>最近往期</h2>
+      </div>
+      <div class="archive-list" id="archiveList"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>由 GitHub Actions 每日自动更新 · 静态托管于 GitHub Pages</p>
+  </footer>
+
+  <template id="cardTemplate">
+    <article class="card">
+      <div class="card-top">
+        <span class="emoji"></span>
+        <span class="source"></span>
+      </div>
+      <h3></h3>
+      <p class="summary"></p>
+      <a class="read-more" target="_blank" rel="noreferrer">查看来源</a>
+    </article>
+  </template>
+
+  <script src="script.js"></script>
+</body>
+</html>
