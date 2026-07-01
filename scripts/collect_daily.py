@@ -297,30 +297,31 @@ def collect_github_cn(today: datetime) -> dict | None:
 
 
 def build_archive_list(today: str, version_id: str | None = None) -> list[dict]:
-    entries = []
-    current_version_path = f"data/versions/{version_id}.json" if version_id else None
+    """Build archive navigation with at most one latest entry per day.
 
-    # New format: each collection creates one timestamped version.
-    # The currently loaded issue is intentionally excluded; the UI already has
-    # a dedicated "最新 / 本期" button, and listing itself under "往期" is confusing.
+    The UI has a dedicated "最新 / 本期" button for today, so the archive list
+    only shows previous days. Labels intentionally use YYYY-MM-DD without time.
+    """
+    latest_by_date: dict[str, str] = {}
+
+    # Prefer timestamped versions and keep only the newest version for each day.
     for path in sorted(VERSIONS_DIR.glob("*.json"), reverse=True):
-        entry_path = f"data/versions/{path.name}"
-        if entry_path == current_version_path:
+        date = path.stem[:10]
+        if date == today:
             continue
-        stem = path.stem
-        date = stem[:10]
-        time_part = stem[11:].replace("-", ":") if len(stem) > 11 else ""
-        label = f"{date} {time_part}".strip()
-        entries.append({"date": label, "path": entry_path})
+        latest_by_date.setdefault(date, f"data/versions/{path.name}")
 
-    # Compatibility with older daily archive files. Skip today's stable archive
-    # while rendering today's latest issue, because it is also the current page.
+    # Compatibility with older stable daily archive files.
     for path in sorted(ARCHIVE_DIR.glob("*.json"), reverse=True):
-        if path.stem == today and version_id:
+        date = path.stem
+        if date == today:
             continue
-        entries.append({"date": path.stem, "path": f"data/archive/{path.name}"})
+        latest_by_date.setdefault(date, f"data/archive/{path.name}")
 
-    return entries[:30]
+    return [
+        {"date": date, "path": latest_by_date[date]}
+        for date in sorted(latest_by_date.keys(), reverse=True)
+    ][:30]
 
 
 def main() -> int:

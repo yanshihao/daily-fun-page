@@ -1,7 +1,7 @@
 {
   "date": "2026-07-01",
-  "updated_at": "2026-07-01T20:25:15.809906+08:00",
-  "version_id": "2026-07-01-20-25-15",
+  "updated_at": "2026-07-01T20:37:32.197788+08:00",
+  "version_id": "2026-07-01-20-37-32",
   "locale": "zh-CN",
   "items": [
     {
@@ -43,35 +43,35 @@
       "emoji": "📺",
       "source": "B站热门",
       "title": "百万英镑·拯救亚当斯",
-      "summary": "猫屎花生 · 播放 1052353 · B站当前热门视频。",
+      "summary": "猫屎花生 · 播放 1088244 · B站当前热门视频。",
       "url": "https://www.bilibili.com/video/av116839870958958"
     },
     {
       "emoji": "📺",
       "source": "B站热门",
       "title": "我的脸子弹都打不穿",
-      "summary": "薪儿姐师尊 · 播放 792981 · B站当前热门视频。",
+      "summary": "薪儿姐师尊 · 播放 817741 · B站当前热门视频。",
       "url": "https://www.bilibili.com/video/av116839552125716"
     },
     {
       "emoji": "📺",
       "source": "B站热门",
       "title": "骗成狗了",
-      "summary": "小潮院长 · 播放 2522086 · 希望观众朋友们喜欢这个系列！ （希望你们喜欢，记得素质三连！）",
+      "summary": "小潮院长 · 播放 2536063 · 希望观众朋友们喜欢这个系列！ （希望你们喜欢，记得素质三连！）",
       "url": "https://www.bilibili.com/video/av116838159749613"
     },
     {
       "emoji": "📺",
       "source": "B站热门",
       "title": "永远怀念我们亲爱的妹爷！",
-      "summary": "陈翔六点半 · 播放 2595112 · B站当前热门视频。",
+      "summary": "陈翔六点半 · 播放 2611337 · B站当前热门视频。",
       "url": "https://www.bilibili.com/video/av116838646158878"
     },
     {
       "emoji": "📺",
       "source": "B站热门",
       "title": "当永夜末日降临，文明会如何发展？",
-      "summary": "末影大黑 · 播放 671453 · 有趣的视频，希望大家喜欢 本视频，参考了《异维囚笼》主体参考了这本书 人设参考了天行轶事 以及《艾尔登法环》《黑暗之魂》《诡秘之主》《博德之门》等内容",
+      "summary": "末影大黑 · 播放 681244 · 有趣的视频，希望大家喜欢 本视频，参考了《异维囚笼》主体参考了这本书 人设参考了天行轶事 以及《艾尔登法环》《黑暗之魂》《诡秘之主》《博德之门》等内容",
       "url": "https://www.bilibili.com/video/av116839434688347"
     },
     {
@@ -91,16 +91,23 @@
     {
       "emoji": "💬",
       "source": "V2EX 最热",
-      "title": "[Claude] 有人说某家 AI 公司的行为是主动遵守中国法律，俺笑了",
-      "summary": "V2EX 社区正在讨论： 这是某家 AI 公司 2025 年 9 月发布的一则 公告 明显人家根本就不打算鸟中国的法律，目的也很明确，就是要限制某些国家的 AI 发展，维护它们民主 AI 的统治地位。",
-      "url": "https://www.v2ex.com/t/1224316#reply6"
+      "title": "[Claude] Anthropic 主动遵守中国法律为什么要被骂？",
+      "summary": "V2EX 社区正在讨论： 我们要知道，根据中华人民共和国法律 《生成式人工智能服务管理暂行办法》 中的： 第二十三条 法律、行政法规规定提供生成式人工智能服务应当取得相关行政许可的，提供者应当依法取得许可。 众所周知 Anthropic 是一家美国企业，根本没有取得大模型服务的备案和行政许可。是不允许向中国人提供服务的。 现在 Anthropic 主动遵守中华人民共和国的法律，主动配合，禁止中国人使用非法的服务，不…",
+      "url": "https://www.v2ex.com/t/1224298#reply27"
+    },
+    {
+      "emoji": "📱",
+      "source": "少数派",
+      "title": "声擎×少数派｜「角落新声」征文活动",
+      "summary": "来自少数派的效率、数字生活与应用观察：那个让你放松娱乐、拥抱汩汩心流、逃离尘世纷扰、找回本真自我的理想一隅，是如何被你切片、重排并注入新生的？ 查看全文",
+      "url": "https://sspai.com/post/111709"
     },
     {
       "emoji": "🧰",
       "source": "中文开源",
-      "title": "zc110747/build_embed_linux_system",
-      "summary": "⭐ 149 · 嵌入式Linux系统总结文档，也包含日常使用中遇到的问题和解决办法，适合运维和嵌入式Linux开发者学习了解。本系列按照Linux环境使用，嵌入式Linux平台构建，嵌入式Linux驱动开发和Linux应用开发四部分，配合实验性质项目同步更新。如果有疑问，请提issue或通过微信\"sxc123456zc\"联系。",
-      "url": "https://github.com/zc110747/build_embed_linux_system"
+      "title": "LifelongLazyLearner/qu-ai-wei",
+      "summary": "⭐ 157 · 去 AI 味：去除简体中文 AI 写作痕迹 / Chinese humanizer skill",
+      "url": "https://github.com/LifelongLazyLearner/qu-ai-wei"
     },
     {
       "emoji": "✨",
@@ -112,48 +119,8 @@
   ],
   "archive": [
     {
-      "date": "2026-07-01 20:18:47",
-      "path": "data/versions/2026-07-01-20-18-47.json"
-    },
-    {
-      "date": "2026-07-01 16:13:13",
-      "path": "data/versions/2026-07-01-16-13-13.json"
-    },
-    {
-      "date": "2026-07-01 12:56:36",
-      "path": "data/versions/2026-07-01-12-56-36.json"
-    },
-    {
-      "date": "2026-07-01 11:03:52",
-      "path": "data/versions/2026-07-01-11-03-52.json"
-    },
-    {
-      "date": "2026-07-01 11:02:06",
-      "path": "data/versions/2026-07-01-11-02-06.json"
-    },
-    {
-      "date": "2026-07-01 02:53:29",
-      "path": "data/versions/2026-07-01-02-53-29.json"
-    },
-    {
-      "date": "2026-06-30 06:11:32",
-      "path": "data/versions/2026-06-30-06-11-32.json"
-    },
-    {
-      "date": "2026-06-30 06:10:50",
-      "path": "data/versions/2026-06-30-06-10-50.json"
-    },
-    {
-      "date": "2026-06-30 06:10:07",
-      "path": "data/versions/2026-06-30-06-10-07.json"
-    },
-    {
-      "date": "2026-06-30 06:00:13",
-      "path": "data/versions/2026-06-30-06-00-13.json"
-    },
-    {
       "date": "2026-06-30",
-      "path": "data/archive/2026-06-30.json"
+      "path": "data/versions/2026-06-30-06-11-32.json"
     }
   ]
 }
