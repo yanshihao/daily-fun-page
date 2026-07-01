@@ -29,8 +29,11 @@ function renderCards(items = []) {
     return;
   }
 
-  for (const item of items) {
+  items.forEach((item, index) => {
     const node = template.content.cloneNode(true);
+    const card = node.querySelector('.card');
+    card.dataset.rank = String(index + 1).padStart(2, '0');
+    card.dataset.source = item.source || 'Daily Fun';
     node.querySelector('.emoji').textContent = item.emoji || '✨';
     node.querySelector('.source').textContent = item.source || 'Daily Fun';
     node.querySelector('h3').textContent = item.title || '未命名趣味';
@@ -38,7 +41,7 @@ function renderCards(items = []) {
     const link = node.querySelector('.read-more');
     link.href = item.url || '#';
     cardsEl.appendChild(node);
-  }
+  });
 }
 
 function createArchiveButton(label, path, activePath, isLatest = false) {
