@@ -1,7 +1,7 @@
 {
   "date": "2026-07-01",
-  "updated_at": "2026-07-01T11:02:06.411726+08:00",
-  "version_id": "2026-07-01-11-02-06",
+  "updated_at": "2026-07-01T11:03:52.039171+08:00",
+  "version_id": "2026-07-01-11-03-52",
   "locale": "zh-CN",
   "items": [
     {
@@ -21,9 +21,9 @@
     {
       "emoji": "💬",
       "source": "V2EX 最热",
-      "title": "[Claude] Claude 邮件钓鱼",
-      "summary": "V2EX 社区正在讨论： 不要打开任何 Anthropic 给你发的邮件，Anthropic 通过在邮件里加追踪器来确认用户的位置，只要发现来自不允许的地区就会立即封号。 这公司真特么的恶心，自己蒸馏别人不说，别人蒸馏它就逼逼歪歪的。对中国真的是满满的恶意。",
-      "url": "https://www.v2ex.com/t/1224116#reply4"
+      "title": "[OpenAI] coordinated deception 被封一个 ChatGPT Pro 账号，还能申述回来吗",
+      "summary": "V2EX 社区正在讨论： 就普通使用，没有什么特殊的，搞搞跨境电商的内容的。出口 ip 三个搬瓦工，最近不稳定有切换",
+      "url": "https://www.v2ex.com/t/1224146#reply1"
     },
     {
       "emoji": "📱",
