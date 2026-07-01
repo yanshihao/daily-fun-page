@@ -1,9 +1,51 @@
 {
   "date": "2026-07-01",
-  "updated_at": "2026-07-01T12:56:36.310850+08:00",
-  "version_id": "2026-07-01-12-56-36",
+  "updated_at": "2026-07-01T16:13:13.692137+08:00",
+  "version_id": "2026-07-01-16-13-13",
   "locale": "zh-CN",
   "items": [
+    {
+      "emoji": "🔥",
+      "source": "微博热搜",
+      "title": "A股",
+      "summary": "微博热搜 · 微博 · 新，热度 1187334。点击查看实时讨论。",
+      "url": "https://s.weibo.com/weibo?q=A%E8%82%A1"
+    },
+    {
+      "emoji": "🔥",
+      "source": "微博热搜",
+      "title": "泰山疑被135公里刀片铁丝网围住",
+      "summary": "微博热搜 · 微博 · 热，热度 866915。点击查看实时讨论。",
+      "url": "https://s.weibo.com/weibo?q=%E6%B3%B0%E5%B1%B1%E7%96%91%E8%A2%AB135%E5%85%AC%E9%87%8C%E5%88%80%E7%89%87%E9%93%81%E4%B8%9D%E7%BD%91%E5%9B%B4%E4%BD%8F"
+    },
+    {
+      "emoji": "🔥",
+      "source": "微博热搜",
+      "title": "致敬这些闪亮的名字",
+      "summary": "微博热搜 · 微博 · 新，热度 700925。点击查看实时讨论。",
+      "url": "https://s.weibo.com/weibo?q=%E8%87%B4%E6%95%AC%E8%BF%99%E4%BA%9B%E9%97%AA%E4%BA%AE%E7%9A%84%E5%90%8D%E5%AD%97"
+    },
+    {
+      "emoji": "🔥",
+      "source": "微博热搜",
+      "title": "hr问我为什么有两个毕业证",
+      "summary": "微博热搜 · 微博 · 热，热度 688746。点击查看实时讨论。",
+      "url": "https://s.weibo.com/weibo?q=hr%E9%97%AE%E6%88%91%E4%B8%BA%E4%BB%80%E4%B9%88%E6%9C%89%E4%B8%A4%E4%B8%AA%E6%AF%95%E4%B8%9A%E8%AF%81"
+    },
+    {
+      "emoji": "🔥",
+      "source": "微博热搜",
+      "title": "特黏糊一孩子",
+      "summary": "微博热搜 · 微博 · 热，热度 540080。点击查看实时讨论。",
+      "url": "https://s.weibo.com/weibo?q=%E7%89%B9%E9%BB%8F%E7%B3%8A%E4%B8%80%E5%AD%A9%E5%AD%90"
+    },
+    {
+      "emoji": "🔥",
+      "source": "微博热搜",
+      "title": "Bin 没想到Doran会玩得这么菜",
+      "summary": "微博热搜 · 微博 · 新，热度 536161。点击查看实时讨论。",
+      "url": "https://s.weibo.com/weibo?q=Bin%20%E6%B2%A1%E6%83%B3%E5%88%B0Doran%E4%BC%9A%E7%8E%A9%E5%BE%97%E8%BF%99%E4%B9%88%E8%8F%9C"
+    },
     {
       "emoji": "📜",
       "source": "中文维基",
@@ -14,30 +56,30 @@
     {
       "emoji": "🧪",
       "source": "Solidot",
-      "title": "美国政府解除对 Claude Fable 5 和 Mythos 5 模型的出口限制",
-      "summary": "中文科技社区 Solidot 的新鲜话题：Anthropic 周二宣布美国商务部已解除对 Claude Fable 5 和 Mythos 5 模型的出口限制，该公司将于周三恢复提供对其新模型的访问。美国政府是在 6 月中旬以国家安全理由下令禁止外国公民访问 Anthropic 最先进的 AI 模型，这一限制甚至涵盖了 Anthropic 自己的外籍员工。美国商务部长 Howard Lutnick 周二在 X 平台上…",
-      "url": "https://www.solidot.org/story?sid=84724"
+      "title": "arXiv 从康奈尔大学独立",
+      "summary": "中文科技社区 Solidot 的新鲜话题：预印本平台 arXiv.org 于 7 月 1 日脱离康奈尔大学成立独立的非营利性组织。arXiv 诞生于 1991 年，创始人 Paul Ginsparg 在 2001 年加入了康奈尔大学，arXiv 网站随后由康奈尔大学图书馆接手。25 年后 arXiv 决定翻开新的篇章。arXiv 组织正致力于确保这一过渡平稳进行，让作者、读者和社区几乎不会感受到有任何变化。官方博客…",
+      "url": "https://www.solidot.org/story?sid=84728"
     },
     {
       "emoji": "💬",
       "source": "V2EX 最热",
-      "title": "[云计算] 之前那个 mjj 的论坛没了， mjj 们都去哪里了",
-      "summary": "V2EX 社区正在讨论： 以前还在论坛上，等着人打广告，瓦工的限时套餐。。。现在没地方去看了",
-      "url": "https://www.v2ex.com/t/1224174#reply7"
+      "title": "[程序员] n 年前互联网繁荣期有一个 35 岁的“免毕业”方案是“转管理”，现在大家应该人均手下几个 agent 员工，很少参与大规模代码手写，是否算是完成…",
+      "summary": "V2EX 社区正在讨论： 现在的码农可以说是人均“小主管”。",
+      "url": "https://www.v2ex.com/t/1224251#reply1"
     },
     {
       "emoji": "📱",
       "source": "少数派",
-      "title": "年度报告不够看？微信读书 Skill 上手体验",
-      "summary": "来自少数派的效率、数字生活与应用观察：人对自己或许会偶尔不诚实，但你的书架是很诚实的。 查看全文",
-      "url": "https://sspai.com/post/109932"
+      "title": "[送码] 白描 App 的 9 周年：推出鸿蒙版，白描 PDF 共创首发",
+      "summary": "来自少数派的效率、数字生活与应用观察：2017年6月21日，白描App按下了发布键。那时的它还很简单，甚至有些单薄：拍下一张图片，识别里面的文字，再复制出来。它最初想解决的，也只是一个非常具体、非常日常的小烦恼：帮女朋友把读书笔记从照片里 ... 查看全文",
+      "url": "https://sspai.com/post/111640"
     },
     {
       "emoji": "🧰",
       "source": "中文开源",
-      "title": "WenyuChiou/awesome-agentic-ai-zh",
-      "summary": "⭐ 3622 · A trilingual (繁中 / English / 简中) learning roadmap for agentic AI: from LLM basics to multi-agent systems, with 240+ curated resources and hands-on examples. 中文 AI agent 學習地圖。",
-      "url": "https://github.com/WenyuChiou/awesome-agentic-ai-zh"
+      "title": "SHORiN-KiWATA/Shorin-ArchLinux-Guide",
+      "summary": "⭐ 2083 · 【2026最适合新手的Arch Linux教程】具体内容包括：系统安装教程、win+linux双系统、N卡驱动、桌面环境、中文输入法、Linux玩游戏、常用虚拟机程序、显卡直通、干净删除linux等。",
+      "url": "https://github.com/SHORiN-KiWATA/Shorin-ArchLinux-Guide"
     },
     {
       "emoji": "✨",
@@ -48,6 +90,10 @@
     }
   ],
   "archive": [
+    {
+      "date": "2026-07-01 12:56:36",
+      "path": "data/versions/2026-07-01-12-56-36.json"
+    },
     {
       "date": "2026-07-01 11:03:52",
       "path": "data/versions/2026-07-01-11-03-52.json"

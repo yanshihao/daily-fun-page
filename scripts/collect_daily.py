@@ -91,14 +91,17 @@ RSS_SOURCES = [
 ]
 
 
-def fetch_bytes(url: str, timeout: int = 20) -> bytes:
-    request = urllib.request.Request(url, headers={"User-Agent": USER_AGENT})
+def fetch_bytes(url: str, timeout: int = 20, headers: dict | None = None) -> bytes:
+    request_headers = {"User-Agent": USER_AGENT}
+    if headers:
+        request_headers.update(headers)
+    request = urllib.request.Request(url, headers=request_headers)
     with urllib.request.urlopen(request, timeout=timeout) as response:
         return response.read()
 
 
-def fetch_json(url: str, timeout: int = 20):
-    return json.loads(fetch_bytes(url, timeout).decode("utf-8"))
+def fetch_json(url: str, timeout: int = 20, headers: dict | None = None):
+    return json.loads(fetch_bytes(url, timeout, headers=headers).decode("utf-8"))
 
 
 def strip_html(text: str) -> str:
@@ -170,6 +173,71 @@ def collect_rss_item(source: dict) -> dict | None:
     except Exception as exc:  # noqa: BLE001
         print(f"RSS fetch failed [{source['name']}]: {exc}", file=sys.stderr)
         return None
+
+
+WEIBO_HEADERS = {
+    "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 Chrome/120 Safari/537.36",
+    "Referer": "https://weibo.com/",
+    "Accept": "application/json,text/plain,*/*",
+}
+
+
+def weibo_search_url(word: str) -> str:
+    return "https://s.weibo.com/weibo?q=" + urllib.parse.quote(word)
+
+
+def collect_weibo_hot_search(limit: int = 6) -> list[dict]:
+    """Collect current Weibo hot-search topics.
+
+    微博网页接口偶尔会因为风控失败，所以这里把它当作“优先增强源”：
+    成功时展示热搜，失败时不影响页面生成。
+    只保存热搜词、热度和搜索链接，不保存正文内容。
+    """
+    urls = [
+        "https://weibo.com/ajax/side/hotSearch",
+        "https://weibo.com/ajax/statuses/hot_band",
+    ]
+    items: list[dict] = []
+    seen: set[str] = set()
+
+    for url in urls:
+        try:
+            data = fetch_json(url, headers=WEIBO_HEADERS)
+            if not data.get("ok"):
+                continue
+
+            if "side/hotSearch" in url:
+                candidates = data.get("data", {}).get("realtime", [])
+            else:
+                candidates = data.get("data", {}).get("band_list", [])
+
+            for entry in candidates:
+                word = clean(entry.get("word") or entry.get("note") or entry.get("word_scheme"), 80)
+                if not word or word in seen:
+                    continue
+                seen.add(word)
+
+                label = entry.get("label_name") or entry.get("icon_desc") or entry.get("small_icon_desc") or "热"
+                category = entry.get("category") or "微博"
+                heat = entry.get("num") or entry.get("raw_hot") or entry.get("hot_value")
+                heat_text = f"，热度 {heat}" if heat else ""
+                summary = clean(f"微博热搜 · {category} · {label}{heat_text}。点击查看实时讨论。", 210)
+
+                items.append({
+                    "emoji": "🔥",
+                    "source": "微博热搜",
+                    "title": word,
+                    "summary": summary,
+                    "url": weibo_search_url(word),
+                })
+
+                if len(items) >= limit:
+                    return items
+        except Exception as exc:  # noqa: BLE001
+            print(f"Weibo hot search fetch failed [{url}]: {exc}", file=sys.stderr)
+            continue
+
+    return items
 
 
 def collect_zh_wikipedia_on_this_day(today: datetime) -> dict | None:
@@ -258,6 +326,9 @@ def main() -> int:
     random.seed(today)
 
     items = []
+
+    # 微博热搜更贴近“每日趣味”，成功时优先展示。
+    items.extend(collect_weibo_hot_search(limit=6))
 
     wiki_item = collect_zh_wikipedia_on_this_day(now)
     if wiki_item:
