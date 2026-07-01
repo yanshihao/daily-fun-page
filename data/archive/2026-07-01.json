@@ -1,7 +1,7 @@
 {
   "date": "2026-07-01",
-  "updated_at": "2026-07-01T11:03:52.039171+08:00",
-  "version_id": "2026-07-01-11-03-52",
+  "updated_at": "2026-07-01T12:56:36.310850+08:00",
+  "version_id": "2026-07-01-12-56-36",
   "locale": "zh-CN",
   "items": [
     {
@@ -14,30 +14,30 @@
     {
       "emoji": "🧪",
       "source": "Solidot",
-      "title": "Claude Code 会悄悄检查用户的系统时区是否是中国",
-      "summary": "中文科技社区 Solidot 的新鲜话题：Claude Code 被发现会悄悄检查用户的系统时区和是否来自中国 AI 公司。对 Claude Code（2.1.196）的本地二进制文件的分析发现，它会检查系统时区是否为 Asia/Shanghai 或 Asia/Urumqi，以及是否匹配中国科技公司的域名，其中包括 baidu.com、alibaba-inc.com、alipay.com、antgroup-inc.…",
-      "url": "https://www.solidot.org/story?sid=84723"
+      "title": "美国政府解除对 Claude Fable 5 和 Mythos 5 模型的出口限制",
+      "summary": "中文科技社区 Solidot 的新鲜话题：Anthropic 周二宣布美国商务部已解除对 Claude Fable 5 和 Mythos 5 模型的出口限制，该公司将于周三恢复提供对其新模型的访问。美国政府是在 6 月中旬以国家安全理由下令禁止外国公民访问 Anthropic 最先进的 AI 模型，这一限制甚至涵盖了 Anthropic 自己的外籍员工。美国商务部长 Howard Lutnick 周二在 X 平台上…",
+      "url": "https://www.solidot.org/story?sid=84724"
     },
     {
       "emoji": "💬",
       "source": "V2EX 最热",
-      "title": "[OpenAI] coordinated deception 被封一个 ChatGPT Pro 账号，还能申述回来吗",
-      "summary": "V2EX 社区正在讨论： 就普通使用，没有什么特殊的，搞搞跨境电商的内容的。出口 ip 三个搬瓦工，最近不稳定有切换",
-      "url": "https://www.v2ex.com/t/1224146#reply1"
+      "title": "[云计算] 之前那个 mjj 的论坛没了， mjj 们都去哪里了",
+      "summary": "V2EX 社区正在讨论： 以前还在论坛上，等着人打广告，瓦工的限时套餐。。。现在没地方去看了",
+      "url": "https://www.v2ex.com/t/1224174#reply7"
     },
     {
       "emoji": "📱",
       "source": "少数派",
-      "title": "派早报：Google 推出 Eclipsa Video 视频标准等",
-      "summary": "来自少数派的效率、数字生活与应用观察：Anthropic 发布 Claude Sonnet 5 和 Claude Science，Google 发布 Nano Banana 2 Lite 和 Gemini Omni Flash 等。 查看全文",
-      "url": "https://sspai.com/post/111773"
+      "title": "年度报告不够看？微信读书 Skill 上手体验",
+      "summary": "来自少数派的效率、数字生活与应用观察：人对自己或许会偶尔不诚实，但你的书架是很诚实的。 查看全文",
+      "url": "https://sspai.com/post/109932"
     },
     {
       "emoji": "🧰",
       "source": "中文开源",
-      "title": "maboloshi/github-chinese",
-      "summary": "⭐ 27929 · GitHub 汉化插件，GitHub 中文化界面。 (GitHub Translation To Chinese)",
-      "url": "https://github.com/maboloshi/github-chinese"
+      "title": "WenyuChiou/awesome-agentic-ai-zh",
+      "summary": "⭐ 3622 · A trilingual (繁中 / English / 简中) learning roadmap for agentic AI: from LLM basics to multi-agent systems, with 240+ curated resources and hands-on examples. 中文 AI agent 學習地圖。",
+      "url": "https://github.com/WenyuChiou/awesome-agentic-ai-zh"
     },
     {
       "emoji": "✨",
@@ -48,6 +48,10 @@
     }
   ],
   "archive": [
+    {
+      "date": "2026-07-01 11:03:52",
+      "path": "data/versions/2026-07-01-11-03-52.json"
+    },
     {
       "date": "2026-07-01 11:02:06",
       "path": "data/versions/2026-07-01-11-02-06.json"
