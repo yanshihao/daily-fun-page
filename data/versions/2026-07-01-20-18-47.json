@@ -1,7 +1,7 @@
 {
   "date": "2026-07-01",
-  "updated_at": "2026-07-01T20:25:15.809906+08:00",
-  "version_id": "2026-07-01-20-25-15",
+  "updated_at": "2026-07-01T20:18:47.701630+08:00",
+  "version_id": "2026-07-01-20-18-47",
   "locale": "zh-CN",
   "items": [
     {
@@ -28,9 +28,9 @@
     {
       "emoji": "🔎",
       "source": "百度热搜",
-      "title": "初心不改 用一生践行誓言",
-      "summary": "7月1日上午，庆祝中国共产党成立105周年大会隆重举行，习近平总书记向“七一勋章”获得者颁授勋章并发表重要讲话。大会前夕，记者独家专访了这些功勋人物，党和人民不会忘记，致敬最闪亮的星！",
-      "url": "https://www.baidu.com/s?wd=%E5%88%9D%E5%BF%83%E4%B8%8D%E6%94%B9+%E7%94%A8%E4%B8%80%E7%94%9F%E8%B7%B5%E8%A1%8C%E8%AA%93%E8%A8%80"
+      "title": "8名共产党员获“七一勋章”",
+      "summary": "马善祥、王於昌、李连成、吾哈斯·苏来曼、吴亚琴、陈俊武、赵亚夫、钟掘。这是8名“七一勋章”获得者的故事，传递致敬！",
+      "url": "https://www.baidu.com/s?wd=8%E5%90%8D%E5%85%B1%E4%BA%A7%E5%85%9A%E5%91%98%E8%8E%B7%E2%80%9C%E4%B8%83%E4%B8%80%E5%8B%8B%E7%AB%A0%E2%80%9D"
     },
     {
       "emoji": "🔎",
@@ -43,36 +43,36 @@
       "emoji": "📺",
       "source": "B站热门",
       "title": "百万英镑·拯救亚当斯",
-      "summary": "猫屎花生 · 播放 1052353 · B站当前热门视频。",
+      "summary": "猫屎花生 · 播放 1035009 · B站当前热门视频。",
       "url": "https://www.bilibili.com/video/av116839870958958"
     },
     {
       "emoji": "📺",
       "source": "B站热门",
-      "title": "我的脸子弹都打不穿",
-      "summary": "薪儿姐师尊 · 播放 792981 · B站当前热门视频。",
-      "url": "https://www.bilibili.com/video/av116839552125716"
-    },
-    {
-      "emoji": "📺",
-      "source": "B站热门",
       "title": "骗成狗了",
-      "summary": "小潮院长 · 播放 2522086 · 希望观众朋友们喜欢这个系列！ （希望你们喜欢，记得素质三连！）",
+      "summary": "小潮院长 · 播放 2512162 · 希望观众朋友们喜欢这个系列！ （希望你们喜欢，记得素质三连！）",
       "url": "https://www.bilibili.com/video/av116838159749613"
     },
     {
       "emoji": "📺",
       "source": "B站热门",
-      "title": "永远怀念我们亲爱的妹爷！",
-      "summary": "陈翔六点半 · 播放 2595112 · B站当前热门视频。",
-      "url": "https://www.bilibili.com/video/av116838646158878"
+      "title": "今天来到了上海嘉定别墅区 老板家庭大聚餐烤上一只正宗的新疆馕坑烤全羊#苏州烤全羊 #苏州馕坑烤全羊#无锡烤全羊#无锡馕坑烤全羊#上海烤全羊",
+      "summary": "苏州刚子馕坑烤全羊 · 播放 1875588 · -",
+      "url": "https://www.bilibili.com/video/av116821298514243"
     },
     {
       "emoji": "📺",
       "source": "B站热门",
-      "title": "当永夜末日降临，文明会如何发展？",
-      "summary": "末影大黑 · 播放 671453 · 有趣的视频，希望大家喜欢 本视频，参考了《异维囚笼》主体参考了这本书 人设参考了天行轶事 以及《艾尔登法环》《黑暗之魂》《诡秘之主》《博德之门》等内容",
-      "url": "https://www.bilibili.com/video/av116839434688347"
+      "title": "哪来的傻孩子啊",
+      "summary": "_离咕咕 · 播放 3727886 · B站当前热门视频。",
+      "url": "https://www.bilibili.com/video/av116836817443728"
+    },
+    {
+      "emoji": "📺",
+      "source": "B站热门",
+      "title": "我的脸子弹都打不穿",
+      "summary": "薪儿姐师尊 · 播放 775111 · B站当前热门视频。",
+      "url": "https://www.bilibili.com/video/av116839552125716"
     },
     {
       "emoji": "📜",
@@ -91,16 +91,23 @@
     {
       "emoji": "💬",
       "source": "V2EX 最热",
-      "title": "[Claude] 有人说某家 AI 公司的行为是主动遵守中国法律，俺笑了",
-      "summary": "V2EX 社区正在讨论： 这是某家 AI 公司 2025 年 9 月发布的一则 公告 明显人家根本就不打算鸟中国的法律，目的也很明确，就是要限制某些国家的 AI 发展，维护它们民主 AI 的统治地位。",
-      "url": "https://www.v2ex.com/t/1224316#reply6"
+      "title": "[宽带症候群] AirEngine5773-23W AP 升级文件",
+      "summary": "V2EX 社区正在讨论： 软件版本：V600R025C00 https://drive.google.com/drive/folders/1Ki7cumIRhMw7OQfyotvIw23iNXsldyg5?usp=sharing 咸鱼淘了个 AirEngine5773-23W 自带软件版本是 V600R024C10 ，工作在 FAT 模式。 但是因为这个玩意儿的系统跟 V200 完全是两个东西，不知道新系统怎么启用…",
+      "url": "https://www.v2ex.com/t/1224281#reply4"
+    },
+    {
+      "emoji": "📱",
+      "source": "少数派",
+      "title": "声擎×少数派｜「角落新声」征文活动",
+      "summary": "来自少数派的效率、数字生活与应用观察：那个让你放松娱乐、拥抱汩汩心流、逃离尘世纷扰、找回本真自我的理想一隅，是如何被你切片、重排并注入新生的？ 查看全文",
+      "url": "https://sspai.com/post/111709"
     },
     {
       "emoji": "🧰",
       "source": "中文开源",
-      "title": "zc110747/build_embed_linux_system",
-      "summary": "⭐ 149 · 嵌入式Linux系统总结文档，也包含日常使用中遇到的问题和解决办法，适合运维和嵌入式Linux开发者学习了解。本系列按照Linux环境使用，嵌入式Linux平台构建，嵌入式Linux驱动开发和Linux应用开发四部分，配合实验性质项目同步更新。如果有疑问，请提issue或通过微信\"sxc123456zc\"联系。",
-      "url": "https://github.com/zc110747/build_embed_linux_system"
+      "title": "WenyuChiou/awesome-agentic-ai-zh",
+      "summary": "⭐ 3665 · A trilingual (繁中 / English / 简中) learning roadmap for agentic AI: from LLM basics to multi-agent systems, with 240+ curated resources and hands-on examples. 中文 AI agent 學習地圖。",
+      "url": "https://github.com/WenyuChiou/awesome-agentic-ai-zh"
     },
     {
       "emoji": "✨",
@@ -111,10 +118,6 @@
     }
   ],
   "archive": [
-    {
-      "date": "2026-07-01 20:18:47",
-      "path": "data/versions/2026-07-01-20-18-47.json"
-    },
     {
       "date": "2026-07-01 16:13:13",
       "path": "data/versions/2026-07-01-16-13-13.json"

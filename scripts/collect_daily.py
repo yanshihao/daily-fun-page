@@ -175,69 +175,77 @@ def collect_rss_item(source: dict) -> dict | None:
         return None
 
 
-WEIBO_HEADERS = {
+BROWSER_HEADERS = {
     "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 Chrome/120 Safari/537.36",
-    "Referer": "https://weibo.com/",
-    "Accept": "application/json,text/plain,*/*",
+    "Accept": "application/json,text/html,*/*",
 }
 
 
-def weibo_search_url(word: str) -> str:
-    return "https://s.weibo.com/weibo?q=" + urllib.parse.quote(word)
+def collect_baidu_hot_search(limit: int = 5) -> list[dict]:
+    """Collect Baidu realtime hot-search topics from public hot board page."""
+    url = "https://top.baidu.com/board?tab=realtime"
+    try:
+        raw = fetch_bytes(url, headers=BROWSER_HEADERS).decode("utf-8", "ignore")
+        match = re.search(r"<!--s-data:(.*?)-->", raw, flags=re.S)
+        if not match:
+            return []
+        data = json.loads(html.unescape(match.group(1)))
+        cards = data.get("data", {}).get("cards", [])
+        content = []
+        for card in cards:
+            if card.get("component") == "hotList":
+                content = card.get("content") or []
+                break
 
-
-def collect_weibo_hot_search(limit: int = 6) -> list[dict]:
-    """Collect current Weibo hot-search topics.
-
-    微博网页接口偶尔会因为风控失败，所以这里把它当作“优先增强源”：
-    成功时展示热搜，失败时不影响页面生成。
-    只保存热搜词、热度和搜索链接，不保存正文内容。
-    """
-    urls = [
-        "https://weibo.com/ajax/side/hotSearch",
-        "https://weibo.com/ajax/statuses/hot_band",
-    ]
-    items: list[dict] = []
-    seen: set[str] = set()
-
-    for url in urls:
-        try:
-            data = fetch_json(url, headers=WEIBO_HEADERS)
-            if not data.get("ok"):
+        items = []
+        for entry in content[:limit]:
+            title = clean(entry.get("query") or entry.get("word"), 80)
+            if not title:
                 continue
+            score = entry.get("hotScore")
+            score_text = f"，热度 {score}" if score else ""
+            summary = clean((entry.get("desc") or f"百度实时热搜{score_text}。点击查看公开搜索结果。"), 210)
+            items.append({
+                "emoji": "🔎",
+                "source": "百度热搜",
+                "title": title,
+                "summary": summary,
+                "url": entry.get("rawUrl") or entry.get("url") or f"https://www.baidu.com/s?wd={urllib.parse.quote(title)}",
+            })
+        return items
+    except Exception as exc:  # noqa: BLE001
+        print(f"Baidu hot search fetch failed: {exc}", file=sys.stderr)
+        return []
 
-            if "side/hotSearch" in url:
-                candidates = data.get("data", {}).get("realtime", [])
-            else:
-                candidates = data.get("data", {}).get("band_list", [])
 
-            for entry in candidates:
-                word = clean(entry.get("word") or entry.get("note") or entry.get("word_scheme"), 80)
-                if not word or word in seen:
-                    continue
-                seen.add(word)
-
-                label = entry.get("label_name") or entry.get("icon_desc") or entry.get("small_icon_desc") or "热"
-                category = entry.get("category") or "微博"
-                heat = entry.get("num") or entry.get("raw_hot") or entry.get("hot_value")
-                heat_text = f"，热度 {heat}" if heat else ""
-                summary = clean(f"微博热搜 · {category} · {label}{heat_text}。点击查看实时讨论。", 210)
-
-                items.append({
-                    "emoji": "🔥",
-                    "source": "微博热搜",
-                    "title": word,
-                    "summary": summary,
-                    "url": weibo_search_url(word),
-                })
-
-                if len(items) >= limit:
-                    return items
-        except Exception as exc:  # noqa: BLE001
-            print(f"Weibo hot search fetch failed [{url}]: {exc}", file=sys.stderr)
-            continue
-
-    return items
+def collect_bilibili_popular(limit: int = 5) -> list[dict]:
+    """Collect Bilibili popular videos from public API."""
+    try:
+        url = f"https://api.bilibili.com/x/web-interface/popular?ps={limit}&pn=1"
+        data = fetch_json(url, headers=BROWSER_HEADERS)
+        if data.get("code") != 0:
+            return []
+        items = []
+        for entry in data.get("data", {}).get("list", [])[:limit]:
+            title = clean(entry.get("title"), 80)
+            if not title:
+                continue
+            owner = (entry.get("owner") or {}).get("name") or "UP 主"
+            stat = entry.get("stat") or {}
+            view = stat.get("view")
+            view_text = f"播放 {view}" if view else "热门视频"
+            desc = entry.get("desc") or "B站当前热门视频。"
+            items.append({
+                "emoji": "📺",
+                "source": "B站热门",
+                "title": title,
+                "summary": clean(f"{owner} · {view_text} · {desc}", 210),
+                "url": f"https://www.bilibili.com/video/av{entry.get('aid')}" if entry.get("aid") else "https://www.bilibili.com/v/popular/all",
+            })
+        return items
+    except Exception as exc:  # noqa: BLE001
+        print(f"Bilibili popular fetch failed: {exc}", file=sys.stderr)
+        return []
 
 
 def collect_zh_wikipedia_on_this_day(today: datetime) -> dict | None:
@@ -327,8 +335,9 @@ def main() -> int:
 
     items = []
 
-    # 微博热搜更贴近“每日趣味”，成功时优先展示。
-    items.extend(collect_weibo_hot_search(limit=6))
+    # 不强制登录的公开热门内容源，成功时优先展示。
+    items.extend(collect_baidu_hot_search(limit=5))
+    items.extend(collect_bilibili_popular(limit=5))
 
     wiki_item = collect_zh_wikipedia_on_this_day(now)
     if wiki_item:

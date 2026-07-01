@@ -1,50 +1,78 @@
 {
   "date": "2026-07-01",
-  "updated_at": "2026-07-01T16:13:13.692137+08:00",
-  "version_id": "2026-07-01-16-13-13",
+  "updated_at": "2026-07-01T20:25:15.809906+08:00",
+  "version_id": "2026-07-01-20-25-15",
   "locale": "zh-CN",
   "items": [
     {
-      "emoji": "🔥",
-      "source": "微博热搜",
-      "title": "A股",
-      "summary": "微博热搜 · 微博 · 新，热度 1187334。点击查看实时讨论。",
-      "url": "https://s.weibo.com/weibo?q=A%E8%82%A1"
+      "emoji": "🔎",
+      "source": "百度热搜",
+      "title": "庆祝中国共产党成立105周年大会举行",
+      "summary": "庆祝中国共产党成立105周年大会7月1日上午在北京人民大会堂隆重举行。中共中央总书记、国家主席、中央军委主席习近平向“七一勋章”获得者颁授勋章并发表重要讲话。他强调，105年来，我们党始终坚守为中国人民谋幸福、为中华民族谋复兴的初心使命，在不懈奋斗中创造了彪炳史册的伟大成就。新征程上，全党同志要坚定信心、接续奋斗，不断创造无愧于时代和人民的新业绩。",
+      "url": "https://www.baidu.com/s?wd=%E5%BA%86%E7%A5%9D%E4%B8%AD%E5%9B%BD%E5%85%B1%E4%BA%A7%E5%85%9A%E6%88%90%E7%AB%8B105%E5%91%A8%E5%B9%B4%E5%A4%A7%E4%BC%9A%E4%B8%BE%E8%A1%8C"
     },
     {
-      "emoji": "🔥",
-      "source": "微博热搜",
-      "title": "泰山疑被135公里刀片铁丝网围住",
-      "summary": "微博热搜 · 微博 · 热，热度 866915。点击查看实时讨论。",
-      "url": "https://s.weibo.com/weibo?q=%E6%B3%B0%E5%B1%B1%E7%96%91%E8%A2%AB135%E5%85%AC%E9%87%8C%E5%88%80%E7%89%87%E9%93%81%E4%B8%9D%E7%BD%91%E5%9B%B4%E4%BD%8F"
+      "emoji": "🔎",
+      "source": "百度热搜",
+      "title": "电动汽车“最严国标”来了",
+      "summary": "7月1日，被业内称作“最严电池令”的《电动汽车用动力蓄电池安全要求》与聚焦整车安全的《电动汽车安全要求》两大强制性国标正式开始实施。内容要求电池不起火、不爆炸，并首次提出“—键断电”物理功能。",
+      "url": "https://www.baidu.com/s?wd=%E7%94%B5%E5%8A%A8%E6%B1%BD%E8%BD%A6%E2%80%9C%E6%9C%80%E4%B8%A5%E5%9B%BD%E6%A0%87%E2%80%9D%E6%9D%A5%E4%BA%86"
     },
     {
-      "emoji": "🔥",
-      "source": "微博热搜",
-      "title": "致敬这些闪亮的名字",
-      "summary": "微博热搜 · 微博 · 新，热度 700925。点击查看实时讨论。",
-      "url": "https://s.weibo.com/weibo?q=%E8%87%B4%E6%95%AC%E8%BF%99%E4%BA%9B%E9%97%AA%E4%BA%AE%E7%9A%84%E5%90%8D%E5%AD%97"
+      "emoji": "🔎",
+      "source": "百度热搜",
+      "title": "一本“印错”的书却被抢购一空",
+      "summary": "1920年陈望道译出《共产党宣言》首个中文全译本，首版因排版失误印错书名，仍迅速售罄。书中 “真理味道很甜” 的故事流传深远，这本小册子为建党筑牢理论根基，深刻影响一代代革命者。",
+      "url": "https://www.baidu.com/s?wd=%E4%B8%80%E6%9C%AC%E2%80%9C%E5%8D%B0%E9%94%99%E2%80%9D%E7%9A%84%E4%B9%A6%E5%8D%B4%E8%A2%AB%E6%8A%A2%E8%B4%AD%E4%B8%80%E7%A9%BA"
     },
     {
-      "emoji": "🔥",
-      "source": "微博热搜",
-      "title": "hr问我为什么有两个毕业证",
-      "summary": "微博热搜 · 微博 · 热，热度 688746。点击查看实时讨论。",
-      "url": "https://s.weibo.com/weibo?q=hr%E9%97%AE%E6%88%91%E4%B8%BA%E4%BB%80%E4%B9%88%E6%9C%89%E4%B8%A4%E4%B8%AA%E6%AF%95%E4%B8%9A%E8%AF%81"
+      "emoji": "🔎",
+      "source": "百度热搜",
+      "title": "初心不改 用一生践行誓言",
+      "summary": "7月1日上午，庆祝中国共产党成立105周年大会隆重举行，习近平总书记向“七一勋章”获得者颁授勋章并发表重要讲话。大会前夕，记者独家专访了这些功勋人物，党和人民不会忘记，致敬最闪亮的星！",
+      "url": "https://www.baidu.com/s?wd=%E5%88%9D%E5%BF%83%E4%B8%8D%E6%94%B9+%E7%94%A8%E4%B8%80%E7%94%9F%E8%B7%B5%E8%A1%8C%E8%AA%93%E8%A8%80"
     },
     {
-      "emoji": "🔥",
-      "source": "微博热搜",
-      "title": "特黏糊一孩子",
-      "summary": "微博热搜 · 微博 · 热，热度 540080。点击查看实时讨论。",
-      "url": "https://s.weibo.com/weibo?q=%E7%89%B9%E9%BB%8F%E7%B3%8A%E4%B8%80%E5%AD%A9%E5%AD%90"
+      "emoji": "🔎",
+      "source": "百度热搜",
+      "title": "天津现1380元煎饼果子",
+      "summary": "近日，天津一家餐厅推出售价‌1380元‌的煎饼果子引发关注，其‌普宁豆酱版金沙参煎饼果子‌半条定价698元。商家表示高价因内含一整条稀缺食材金沙参，且该产品为长期在售。‌‌",
+      "url": "https://www.baidu.com/s?wd=%E5%A4%A9%E6%B4%A5%E7%8E%B01380%E5%85%83%E7%85%8E%E9%A5%BC%E6%9E%9C%E5%AD%90"
     },
     {
-      "emoji": "🔥",
-      "source": "微博热搜",
-      "title": "Bin 没想到Doran会玩得这么菜",
-      "summary": "微博热搜 · 微博 · 新，热度 536161。点击查看实时讨论。",
-      "url": "https://s.weibo.com/weibo?q=Bin%20%E6%B2%A1%E6%83%B3%E5%88%B0Doran%E4%BC%9A%E7%8E%A9%E5%BE%97%E8%BF%99%E4%B9%88%E8%8F%9C"
+      "emoji": "📺",
+      "source": "B站热门",
+      "title": "百万英镑·拯救亚当斯",
+      "summary": "猫屎花生 · 播放 1052353 · B站当前热门视频。",
+      "url": "https://www.bilibili.com/video/av116839870958958"
+    },
+    {
+      "emoji": "📺",
+      "source": "B站热门",
+      "title": "我的脸子弹都打不穿",
+      "summary": "薪儿姐师尊 · 播放 792981 · B站当前热门视频。",
+      "url": "https://www.bilibili.com/video/av116839552125716"
+    },
+    {
+      "emoji": "📺",
+      "source": "B站热门",
+      "title": "骗成狗了",
+      "summary": "小潮院长 · 播放 2522086 · 希望观众朋友们喜欢这个系列！ （希望你们喜欢，记得素质三连！）",
+      "url": "https://www.bilibili.com/video/av116838159749613"
+    },
+    {
+      "emoji": "📺",
+      "source": "B站热门",
+      "title": "永远怀念我们亲爱的妹爷！",
+      "summary": "陈翔六点半 · 播放 2595112 · B站当前热门视频。",
+      "url": "https://www.bilibili.com/video/av116838646158878"
+    },
+    {
+      "emoji": "📺",
+      "source": "B站热门",
+      "title": "当永夜末日降临，文明会如何发展？",
+      "summary": "末影大黑 · 播放 671453 · 有趣的视频，希望大家喜欢 本视频，参考了《异维囚笼》主体参考了这本书 人设参考了天行轶事 以及《艾尔登法环》《黑暗之魂》《诡秘之主》《博德之门》等内容",
+      "url": "https://www.bilibili.com/video/av116839434688347"
     },
     {
       "emoji": "📜",
@@ -56,30 +84,23 @@
     {
       "emoji": "🧪",
       "source": "Solidot",
-      "title": "arXiv 从康奈尔大学独立",
-      "summary": "中文科技社区 Solidot 的新鲜话题：预印本平台 arXiv.org 于 7 月 1 日脱离康奈尔大学成立独立的非营利性组织。arXiv 诞生于 1991 年，创始人 Paul Ginsparg 在 2001 年加入了康奈尔大学，arXiv 网站随后由康奈尔大学图书馆接手。25 年后 arXiv 决定翻开新的篇章。arXiv 组织正致力于确保这一过渡平稳进行，让作者、读者和社区几乎不会感受到有任何变化。官方博客…",
-      "url": "https://www.solidot.org/story?sid=84728"
+      "title": "LHC 第三次停机维护",
+      "summary": "中文科技社区 Solidot 的新鲜话题：CERN 宣布了 LHC 的第三次长时间停机维护（Long Shutdown 3）。这次维护和升级将为下一阶段的 High-Luminosity LHC(HiLumi LHC)的运行做准备。LHC 于 1998-2008 年建造，2009 年投入运行，2010 年首次实现 3.5TeV 粒子对撞，2012 年宣布发现了希格斯玻色子。2013-2015 年 LHC 进行了第一…",
+      "url": "https://www.solidot.org/story?sid=84731"
     },
     {
       "emoji": "💬",
       "source": "V2EX 最热",
-      "title": "[程序员] n 年前互联网繁荣期有一个 35 岁的“免毕业”方案是“转管理”，现在大家应该人均手下几个 agent 员工，很少参与大规模代码手写，是否算是完成…",
-      "summary": "V2EX 社区正在讨论： 现在的码农可以说是人均“小主管”。",
-      "url": "https://www.v2ex.com/t/1224251#reply1"
-    },
-    {
-      "emoji": "📱",
-      "source": "少数派",
-      "title": "[送码] 白描 App 的 9 周年：推出鸿蒙版，白描 PDF 共创首发",
-      "summary": "来自少数派的效率、数字生活与应用观察：2017年6月21日，白描App按下了发布键。那时的它还很简单，甚至有些单薄：拍下一张图片，识别里面的文字，再复制出来。它最初想解决的，也只是一个非常具体、非常日常的小烦恼：帮女朋友把读书笔记从照片里 ... 查看全文",
-      "url": "https://sspai.com/post/111640"
+      "title": "[Claude] 有人说某家 AI 公司的行为是主动遵守中国法律，俺笑了",
+      "summary": "V2EX 社区正在讨论： 这是某家 AI 公司 2025 年 9 月发布的一则 公告 明显人家根本就不打算鸟中国的法律，目的也很明确，就是要限制某些国家的 AI 发展，维护它们民主 AI 的统治地位。",
+      "url": "https://www.v2ex.com/t/1224316#reply6"
     },
     {
       "emoji": "🧰",
       "source": "中文开源",
-      "title": "SHORiN-KiWATA/Shorin-ArchLinux-Guide",
-      "summary": "⭐ 2083 · 【2026最适合新手的Arch Linux教程】具体内容包括：系统安装教程、win+linux双系统、N卡驱动、桌面环境、中文输入法、Linux玩游戏、常用虚拟机程序、显卡直通、干净删除linux等。",
-      "url": "https://github.com/SHORiN-KiWATA/Shorin-ArchLinux-Guide"
+      "title": "zc110747/build_embed_linux_system",
+      "summary": "⭐ 149 · 嵌入式Linux系统总结文档，也包含日常使用中遇到的问题和解决办法，适合运维和嵌入式Linux开发者学习了解。本系列按照Linux环境使用，嵌入式Linux平台构建，嵌入式Linux驱动开发和Linux应用开发四部分，配合实验性质项目同步更新。如果有疑问，请提issue或通过微信\"sxc123456zc\"联系。",
+      "url": "https://github.com/zc110747/build_embed_linux_system"
     },
     {
       "emoji": "✨",
@@ -90,6 +111,14 @@
     }
   ],
   "archive": [
+    {
+      "date": "2026-07-01 20:18:47",
+      "path": "data/versions/2026-07-01-20-18-47.json"
+    },
+    {
+      "date": "2026-07-01 16:13:13",
+      "path": "data/versions/2026-07-01-16-13-13.json"
+    },
     {
       "date": "2026-07-01 12:56:36",
       "path": "data/versions/2026-07-01-12-56-36.json"
