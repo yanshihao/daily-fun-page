@@ -222,24 +222,28 @@ def collect_github_cn(today: datetime) -> dict | None:
 
 def build_archive_list(today: str, version_id: str | None = None) -> list[dict]:
     entries = []
+    current_version_path = f"data/versions/{version_id}.json" if version_id else None
 
     # New format: each collection creates one timestamped version.
+    # The currently loaded issue is intentionally excluded; the UI already has
+    # a dedicated "最新 / 本期" button, and listing itself under "往期" is confusing.
     for path in sorted(VERSIONS_DIR.glob("*.json"), reverse=True):
+        entry_path = f"data/versions/{path.name}"
+        if entry_path == current_version_path:
+            continue
         stem = path.stem
         date = stem[:10]
         time_part = stem[11:].replace("-", ":") if len(stem) > 11 else ""
         label = f"{date} {time_part}".strip()
-        entries.append({"date": label, "path": f"data/versions/{path.name}"})
+        entries.append({"date": label, "path": entry_path})
 
-    # Compatibility with older daily archive files.
+    # Compatibility with older daily archive files. Skip today's stable archive
+    # while rendering today's latest issue, because it is also the current page.
     for path in sorted(ARCHIVE_DIR.glob("*.json"), reverse=True):
         if path.stem == today and version_id:
             continue
         entries.append({"date": path.stem, "path": f"data/archive/{path.name}"})
 
-    if version_id and not any(entry["path"] == f"data/versions/{version_id}.json" for entry in entries):
-        label = f"{today} {version_id[11:].replace('-', ':')}"
-        entries.insert(0, {"date": label, "path": f"data/versions/{version_id}.json"})
     return entries[:30]
 
 
