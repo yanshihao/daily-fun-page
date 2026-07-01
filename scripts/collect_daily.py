@@ -17,6 +17,7 @@ import urllib.parse
 import urllib.request
 import xml.etree.ElementTree as ET
 from datetime import datetime, timezone
+from zoneinfo import ZoneInfo
 from email.utils import parsedate_to_datetime
 from pathlib import Path
 
@@ -28,6 +29,7 @@ TODAY_JSON = DATA_DIR / "today.json"
 ARCHIVE_INDEX = DATA_DIR / "archive.json"
 
 USER_AGENT = "daily-fun-page/1.0 (+https://github.com/yanshihao/daily-fun-page)"
+CHINA_TZ = ZoneInfo("Asia/Shanghai")
 
 FALLBACK_FACTS = [
     {
@@ -246,7 +248,7 @@ def main() -> int:
     ARCHIVE_DIR.mkdir(parents=True, exist_ok=True)
     VERSIONS_DIR.mkdir(parents=True, exist_ok=True)
 
-    now = datetime.now(timezone.utc)
+    now = datetime.now(CHINA_TZ)
     today = now.strftime("%Y-%m-%d")
     version_id = now.strftime("%Y-%m-%d-%H-%M-%S")
     random.seed(today)

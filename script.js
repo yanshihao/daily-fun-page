@@ -11,7 +11,7 @@ function formatDate(dateText, versionId) {
   if (!dateText) return '今日精选';
   if (versionId && versionId.length > 11) {
     const timeText = versionId.slice(11).replaceAll('-', ':');
-    return `${dateText} ${timeText} 精选`;
+    return `${dateText} ${timeText} 北京时间精选`;
   }
   return `${dateText} 今日精选`;
 }
@@ -73,7 +73,7 @@ function renderArchive(archive = [], activePath = 'data/today.json') {
 function renderDataset(data, path = 'data/today.json') {
   currentData = data;
   todayTitle.textContent = formatDate(data.date, data.version_id);
-  const versionText = data.version_id ? ` · 版本 ${data.version_id.slice(11).replaceAll('-', ':')}` : '';
+  const versionText = data.version_id ? ` · 版本 ${data.version_id.slice(11).replaceAll('-', ':')} 北京时间` : '';
   setStatus(`已加载：${data.date || '今天'}${versionText} · 共 ${data.items?.length || 0} 条趣味`, 'good');
   renderCards(data.items || []);
   renderArchive(data.archive || [], path);
