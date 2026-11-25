@@ -1,5 +1,9 @@
 [
   {
+    "date": "2026-11-24",
+    "path": "data/versions/2026-11-24-18-03-44.json"
+  },
+  {
     "date": "2026-11-23",
     "path": "data/versions/2026-11-23-15-51-33.json"
   },
@@ -114,9 +118,5 @@
   {
     "date": "2026-10-26",
     "path": "data/versions/2026-10-26-12-57-28.json"
-  },
-  {
-    "date": "2026-10-25",
-    "path": "data/versions/2026-10-25-12-53-43.json"
   }
 ]
